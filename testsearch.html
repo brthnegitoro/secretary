@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title>検索</title>
+		<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="lib/db_core.js"></script>
+		<script type="text/javascript" src="csvsearch.js"></script>
+	</head>
+	<body onload="load(DB);" bgcolor="#E0FFFF" link="#0000cc" vlink="#000080" alink="#ff0000">
+				<center>
+				<img src="./hisho.jpg" width="150" height="150" vspace="5" alt="" >
+        <form name="sqlform">
+        	<div id="searchBlock">
+				<table border="0" bgcolor="#ADD8E6" width="400px">
+<tr><td align="center">
+
+
+
+<h2>検索条件</h2>
+				<p class="key">日付　<input id="dt" name="txtdate" />　</p>
+				<p class="key">内容　<input id="kw" value="" name="txtkw" /> </p>
+	            <input type="button" value="検索" onclick="writeTbl(DB,makesql());$('#usersql').val(makesql());" />
+			</div><br>
+</td></tr></table>
+		</form>
+		<h2>検索結果</h2>	
+		<table border="0" bgcolor="#ADD8E6"><tr><td align="center">
+		<div id="tablediv">このブロックに結果が表示されます</div>
+		</td></tr></table>
+	</center>
+</body>
+</html>
