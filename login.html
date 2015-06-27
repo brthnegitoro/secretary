@@ -1,43 +1,61 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
-<html>
+<html lang="ja">
 	<head>
-	<title>login</title>
-	<body bgcolor = #E0FFFF>
-	<center>
-	<br><br><br>
-	<table border="0", bgcolor =  #ADD8E6>
-	<tr>
-		<th>
-			ログイン名
-			<br>
-		</th>
-		<td>
-			<input type="text" value="" name="id" size="50">
-		</td>
-	</tr>
-	
-	<tr>
-	
-		<th>
-		<br>
-			パスワード
+		<title>login</title>
+		<script>
+			function comfirm() {
 			
-		</th>
-		<td>
-		<br>
-		<input type="password" value="" name="id" size="50">
-		</td>
-	</tr>
-	
-		<td colspan = "2" align= "center">
-			<input type ="submit"  onclick="location.href='search.html'"  value= "ログイン" name="login">
-		</td>
-	
-		
-	</center>
-	</body>
+				var strid = document.login.id.value;
+				var strpass = document.login.password.value;
+				
+				
+				if (strid != "ayoshikawa") {
+					alert("ログイン名またはパスワードが異なります");
+					return false;
+				}
+				
+				if (strpass != "1234") {
+					alert("ログイン名またはパスワードが異なります");
+					return false;
+				}
+				location.href = "search.html";
+				}
+			
+		</script>
 	</head>
+			<body bgcolor = #E0FFFF>
+			<form name="login">
+			<center>
+				<br><br><br>
+				<table border="0", bgcolor =  #ADD8E6>
+					<tr>
+						<th>
+							ログイン名
+							<br>
+						</th>
+						<td>
+							<input type="text" value="" name="id" size="50">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<br>
+							パスワード
+						</th>
+						<td>
+							<br>
+							<input type="password" value="" name="password" size="50">
+						</td>
+					</tr>
+					<td colspan = "2" align= "center">
+						<input type ="button"  onclick="comfirm()"  value= "ログイン">
+					</td>
+					
+				</table>
+			</center>
+		</form>
+	</body>
 </html>
 
 
